@@ -17,7 +17,7 @@ const EditUser = () => {
   }, []);
  
   const getUserById = async () => {
-    const response = await axios.get(`https://ziya-uas-backend.herokuapp.com/users/${id}`);
+    const response = await axios.get(`https://ziya-uas-backend.herokuapp.com/user/${id}`);
     setNama(response.data.nama);
     setNim(response.data.nim);
     setKelas(response.data.kelas);
@@ -29,7 +29,7 @@ const EditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://ziya-uas-backend.herokuapp.com/users/${id}`, {
+      await axios.patch(`https://ziya-uas-backend.herokuapp.com/user/${id}`, {
         nama,
         nim,
         kelas,
