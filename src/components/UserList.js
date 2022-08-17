@@ -10,13 +10,13 @@ const UserList = () => {
   }, []);
  
   const getUsers = async () => {
-    const response = await axios.get("https://ziya-uas-backend.herokuapp.com/users");
+    const response = await axios.get("https://ziya-uas-backend.herokuapp.com/user");
     setUser(response.data);
   };
  
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://ziya-uas-backend.herokuapp.com/users/${id}`);
+      await axios.delete(`https://ziya-uas-backend.herokuapp.com/user/${id}`);
       getUsers();
     } catch (error) {
       console.log(error);
