@@ -17,7 +17,7 @@ const EditUser = () => {
   }, []);
  
   const getUserById = async () => {
-    const response = await axios.get('https://ziya-uas-backend.herokuapp.com/user/${id}`);
+    const response = await axios.get(`https://ziya-uas-backend.herokuapp.com/user/${id}`);
     setNama(response.data.nama);
     setNim(response.data.nim);
     setKelas(response.data.kelas);
@@ -47,7 +47,7 @@ const EditUser = () => {
     <div className="columns mt-5">
       <div className="column is-half">
         <form onSubmit={updateUser}>
-            <div className="field">
+          <div className="field">
             <label className="label">Nama</label>
             <div className="control">
               <input
